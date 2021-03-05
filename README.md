@@ -1,2 +1,2 @@
 # newPro
-learning JS
+ learning JS
