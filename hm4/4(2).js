@@ -6,12 +6,16 @@
 // alert (miles);
 // console.log (miles)
 
-function calcLong (){
-    let d = +prompt ("Введите диаметр")
-    let miles = (Math.PI * d); 
-    console.log (miles)  
-    return miles;
+// function calcLong (){
+//     let d = +prompt ("Введите диаметр")
+//     let miles = (Math.PI * d); 
+//     console.log (miles)  
+//     return miles;
+// }
+// calcLong ('')
+
+function calcLong (z){
+    return  (Math.PI * z);
 }
-calcLong ('')
-
-
+const calcLongNumber = calcLong (4);
+console.log (calcLongNumber);
