@@ -9,11 +9,17 @@
 // console.log (calcCenter)
 
 
-function calcSum (){
-    let a = +prompt ("Первое число");
-    let b = +prompt ("Второе число");
-    let calcCenter = (a + b) / 2; 
-    console.log ("a =", a ,"b =", b , "Result:", calcCenter)
-    return calcCenter;  
+// function calcSum (){
+//     let a = +prompt ("Первое число");
+//     let b = +prompt ("Второе число");
+//     let calcCenter = (a + b) / 2; 
+//     console.log ("a =", a ,"b =", b , "Result:", calcCenter)
+//     return calcCenter;  
+// }
+// calcSum('')
+
+function calcSum (a, b){
+    return ((a + b) / 2);
 }
-calcSum('')
+const calcSumSearched = calcSum (12, 9);
+console.log (calcSumSearched);
