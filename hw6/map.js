@@ -20,7 +20,7 @@ function selfMap(array) {
   return fakeArray;
 }
 const mapTest = selfMap(numberArray)
-console.log (mapTest)
+console.log (numberArray, mapTest)
 
 
 
