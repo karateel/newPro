@@ -1,6 +1,6 @@
 const originalObj = {
-    name: Tony,
-    lastname: Stark
+    name: "Tony",
+    lastname: "Stark"
 };
 
 function copy (target, origin){
