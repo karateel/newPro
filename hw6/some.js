@@ -25,14 +25,12 @@
 const lastChanse = [1, 2, 3, 4, 5, -9, -10];
 
 function fakeSome (array, callBack){
-    const fakeLastChanse = [];
     for (let value of array){
         if (callBack(value)){
             return true
         }
         return false
     }
-    return fakeLastChanse
 }
 
 function fakeSomeMath (value) {
