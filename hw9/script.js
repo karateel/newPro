@@ -1,7 +1,7 @@
 const names = [
     "ZeroTwo",
     "Rem",
-    "Rias"
+    "Rias Griamory"
 ];
 const form = document.createElement("form");
 const block = document.createElement("div");
