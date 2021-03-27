@@ -14,11 +14,7 @@ const objectForCopy = {
 
 
 function cuteCopy(main) {
-<<<<<<< HEAD
-    if (typeof(main) !== "object") {
-=======
     if (typeof (main) !== "object") {
->>>>>>> 17dadb2bec2988470b7b13798de93c09bb7072f6
         return main;
     } else if (Array.isArray(main)) {
         let fakeArray = [];
