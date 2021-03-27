@@ -13,10 +13,8 @@ const objectForCopy = {
 }
 
 
-
-
 function cuteCopy(main) {
-    if (typeof (main) !== "object" || typeof(main.keys) === undefined) {
+    if (typeof(main) !== "object") {
         return main;
     } else if (Array.isArray(main)) {
         let fakeArray = [];
@@ -32,6 +30,7 @@ function cuteCopy(main) {
         return fakeObject;
     }
 }
+
 
 
 const objectCopied = cuteCopy(objectForCopy);
