@@ -1,0 +1,13 @@
+div {
+    width: 500px;
+    background-color: pink;
+    height: 100px;
+    display: flex;
+    border: 1px solid blueviolet;
+}
+span {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin-left: 45px;
+}   
