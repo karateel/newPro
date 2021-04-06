@@ -61,19 +61,17 @@ form.addEventListener("input", () => {
 
 button.addEventListener("click", (event) => {
     event.preventDefault();
-    const keys = form.querySelectorAll("input");
-    const json = {};
-    json[keys[0].key] = keys[1].key;
-    console.log (json);
-    keys.forEach((k) => {
-        k.key = "";
-        k.removeAttribute("class");
-    })
+    const values = form.querySelectorAll("input");
+    const object = {};
+    values.forEach((value,key) => {
+        if(!Reflect.has(object,key)){
+            object[key] = value;
+            return
+        } else if (!Array.isArray(object[key])){
+            object[key] = [object[key]];
+        }
+        object[key].push(value)
+    });
+    const json = JSON.stringify(object);
+    console.log (json)
 });
-
-
-
-
-
-
-
