@@ -9,6 +9,8 @@ function currentTime() {
     return [hh, mm, ss];
 }
 
+// const time = new Date ()  не работает так :( 
+
 function oclockWrapper(timeArray) {
     const timeWrapper = document.createElement("div");
     timeWrapper.className = "clock";
