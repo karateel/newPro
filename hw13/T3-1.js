@@ -41,6 +41,6 @@ function Unit(type, health, maxHealth, maxDistance) {
  };
  Army.prototype.cloneUnit = function (numOfUnit){
      const unitNumber = numOfUnit - 1;
-     const unitCopied = new Unit(this.type[unitNumber], this.health[unitNumber], this.maxHealth[unitNumber], this.maxDistance[unitNumber]);
+     const unitCopied = new Unit(this.units[unitNumber].type, this.units[unitNumber].health, this.units[unitNumber].maxHealth, this.units[unitNumber].maxDistance);
      return unitCopied;
  }
