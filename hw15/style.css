@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+}
+
+.clock {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    color: burlywood;
+    background-color: cadetblue     ;
+}
+
+.clock0::after {
+    content: ":"
+}
+
+.clock1::after {
+    content: ":"
+}
