@@ -9,11 +9,3 @@
     color: burlywood;
     background-color: cadetblue     ;
 }
-
-.clock0::after {
-    content: ":"
-}
-
-.clock1::after {
-    content: ":"
-}
