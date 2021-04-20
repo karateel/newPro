@@ -39,13 +39,13 @@ function oclockWrapper(timeArray) {
     timeWrapper.className = "clock";
     for (let i = 0; i < timeArray.length; i++) {
         const div = document.createElement("div");
-        div.className = "clock" + i;
+        div.className = "clock" ;
         timeWrapper.appendChild(div);
     }
+    
     return timeWrapper
 }
-
-
+  
 function timeShow(timeElemet) {
     const clock = document.body.querySelector(".clock");
     if (clock) {
@@ -65,12 +65,15 @@ const formElement = document.createElement("select");
 const optionFirst = document.createElement("option");
 optionFirst.value = "hhmmdd";
 optionFirst.innerText = "hhmmdd";
+optionFirst.className = "hhmmdd"
 const optionSecond = document.createElement("option");
 optionSecond.value = "ampm";
 optionSecond.innerText = "ampm";
+optionSecond.className = "ampm";
 const optionThird = document.createElement("option");
 optionThird.value = "ydm";
 optionThird.innerText = "full Date";
+optionThird.className = "ydm";
 
 formElement.appendChild(optionFirst);
 formElement.appendChild(optionSecond);
@@ -79,86 +82,33 @@ form.appendChild(formElement);
 document.body.appendChild(form);
 
 const select = document.querySelector('select');
+const option = document.querySelectorAll('option');
 
 select.addEventListener('change',() => { 
-    if (select.value === "hhmmdd"){
-        document.body.appendChild(oclockWrapper(currentTime()));
-        setInterval(() => timeShow(currentTime()), 1000)
-    } 
-    if (select.value === "ampm"){
-        document.body.appendChild(oclockWrapper(formatAMPM()));
-        setInterval(() => timeShow(formatAMPM()), 1000);
-    } 
-    if (select.value === "ydm"){  
-        document.body.appendChild(oclockWrapper(fullDate()));
-        setInterval(() => timeShow(fullDate()), 1000);
-    }
+    switch (select.value){
+        case 'hhmmdd':
+            document.body.appendChild(oclockWrapper(currentTime()));
+            setInterval(() => timeShow(currentTime()), 1000)
+            break;
+        case 'ampm':
+            document.body.appendChild(oclockWrapper(formatAMPM()));
+            setInterval(() => timeShow(formatAMPM()), 1000);
+            break;
+        case 'ydm':
+            document.body.appendChild(oclockWrapper(fullDate()));
+            setInterval(() => timeShow(fullDate()), 1000);
+            break;
+   }
 });
 
-// optionElement.value = "hhmmss";
-// optionElement.text = "hhmmss"
-// optionElement.selected = true;
-// let newOption = new Option("ampm", "ampm")
-
-
-// function selectMade(){
-//     const selectList = document.createElement("select");
-//     selectList.className = "time-format" //added
-//     return selectList
-// }
-
-// function optionMade(){
-//     let selectList = 
-
-//     // const selectOption = document.createElement("option");
-//     // const selectOptionSecond = document.createElement("option");
-//     // const selectOptionThird = document.createElement("option");
-//     // selectOption.className = "hhmmss";
-//     // selectOption.value = "hhmmss";
-//     // selectOption.innerText = "HH:MM:SS";
-//     // selectOptionSecond.innerText = "AM/PM";
-//     // selectOptionSecond.className = "ampm";
-//     // selectOptionSecond.value = "ampm";
-//     // selectOptionThird.innerText = "YYYY-MM-DD HH:MM";
-//     // selectOptionThird.className = "ymd";
-//     // selectOptionThird.value = "ymd";
-//     // return (selectOption, selectOptionSecond, selectOptionThird)
-// }
-
-// const select = selectMade();
-// document.body.appendChild(select);
-// const option = optionMade();
-// select.appendChild(option)
-
-// document.body.appendChild(oclockWrapper(formatAMPM()));
-// document.body.appendChild(oclockWrapper(currentTime()))
-
-
-// setInterval(() => timeShow(formatAMPM()), 1000);
-// setInterval(() => timeShow(currentTime()), 1000);
+// if (select.value === "hhmmdd"){
+//     document.body.appendChild(oclockWrapper(currentTime()));
+//     setInterval(() => timeShow(currentTime()), 1000)   
+// } 
+// if (select.value === "ampm"){
     
-    // function oclockWrapper(timeArray) {
-    //     const timeWrapper = document.createElement("div");
-    //     timeWrapper.className = "clock";
-    //     for (let i = 0; i < timeArray.length; i++) {
-    //       const div = document.createElement("div");
-    //       div.className = "clock" + i;
-    //       timeWrapper.appendChild(div);
-    //     }
-    //     const selectList = document.createElement("select");
-    //     selectList.className = "time-format"; //added
-    //     timeWrapper.appendChild(selectList);
-    //     return {
-    //       timeWrapper,
-    //       selectList
-    //     };
-    //   }
-      
-    //   const result = oclockWrapper([]);
-    //   const timeWrapper = result.timeWrapper;
-    //   const selectList = result.selectList;
-      
-    //   function chooseFormat() {
-    //     console.log(selectList);
-    // }
-    
+// } 
+// if (select.value === "ydm"){  
+//     document.body.appendChild(oclockWrapper(fullDate()));
+//     setInterval(() => timeShow(fullDate()), 1000);
+// }
