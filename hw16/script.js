@@ -2,12 +2,12 @@ function getArrFromStorage(key) {
     try {
         return JSON.parse(localStorage.getItem(key))
     } catch (error) {
-        console.error("arror at  arr in localstorage");
+        console.error("ERROR IN LOCALSTORAGE");
         return false;
     }
 }
 
-const arrFromLStorage = getArrFromStorage("arr");
+const arrFromStorage = getArrFromStorage("arr");
 
 const names = arrFromLStorage || [
     "ZeroTwo",
