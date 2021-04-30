@@ -1,4 +1,5 @@
-function sayHi(text){
-    return text
+function number(num1, num2){
+    return num1 % num2
 }
-console.log(sayHi("Hello World"))
+const z = number(2312312, 43294)
+console.log(z)
